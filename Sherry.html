@@ -162,7 +162,7 @@
 		</noscript>
 		<script>
 		(function(w, d, s, l, i, wi) {
-
+			response.writeHead(200, {'Access-Control-Allow-Origin':'*'});
 			var f = d.getElementsByTagName(s);
 
 			w[l] = w[l] || [];
