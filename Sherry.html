@@ -19,8 +19,8 @@
 <body>
 	<!-- <div id="box">
 		<canvas id="cvs" width="420" height="420"></canvas>
-	</div> -->
-	<!-- <div class="sharethis-inline-share-buttons"></div> -->
+	</div>
+	<div class="sharethis-inline-share-buttons"></div>
 	<script>
 		var cvs=document.getElementById('cvs');
 		var ctx=cvs.getContext("2d");
@@ -33,26 +33,26 @@
 			h>11?h-12:h;
 			h=h+(m/60);
 			m=m+(s/60);
-
+	
 			//2. 切割圆形
 			ctx.beginPath();
 			ctx.arc(210,210,200,0,360,false);
 			ctx.clip();
 			ctx.closePath();
-
+	
 			//3. 画背景图片
 			var img=new Image();
 			img.src="sherry.jpg";
 			img.onload=function(){
 				ctx.drawImage(img,0,0,420,420);
-
+	
 				//画表的边界线
 				ctx.beginPath();
 				ctx.arc(210,210,200,0,360,false);
 				ctx.strokeStyle="#60d9f8";
 				ctx.lineWidth=10;
 				ctx.stroke();
-
+	
 				//画分刻度 360/60=6
 				for (var i = 0; i < 60; i++) {
 					ctx.save();
@@ -67,7 +67,7 @@
 					ctx.closePath();
 					ctx.restore();
 				};
-
+	
 				//画时刻度 360/12=30
 				for (var i = 0; i < 12; i++) {
 					ctx.save();
@@ -82,7 +82,7 @@
 					ctx.closePath();
 					ctx.restore();
 				};
-
+	
 				//画时针
 				ctx.save();
 				ctx.beginPath();
@@ -95,7 +95,7 @@
 				ctx.stroke();
 				ctx.closePath();
 				ctx.restore();
-
+	
 				//画分针
 				ctx.save();
 				ctx.beginPath();
@@ -108,7 +108,7 @@
 				ctx.stroke();
 				ctx.closePath();
 				ctx.restore();
-
+	
 				//画秒针
 				ctx.save();
 				ctx.beginPath();
@@ -120,7 +120,7 @@
 				ctx.lineWidth=3;
 				ctx.stroke();
 				ctx.closePath();
-
+	
 				//秒针上的圆
 				ctx.beginPath();
 				ctx.arc(0,-155,6,0,360,false);
@@ -141,7 +141,7 @@
 				ctx.stroke();
 				ctx.closePath();
 				ctx.restore();
-
+	
 				//显示当前时间
 				var h2=time.getHours();
 				var m2=time.getMinutes();
@@ -154,11 +154,11 @@
 		}
 		// clock();
 		//setInterval(clock,1000);
-	</script>
+	</script> -->
 	<!-- ivideoplaylist plugin -->
 	<div id="ivideoplaylist-id">
 		<noscript>
-			<iframe src="http://www.googletagmanager.com/ns.html?id='GTM-TBW3V7B'" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+			<iframe src="https://www.googletagmanager.com/ns.html?id='GTM-TBW3V7B'" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 		</noscript>
 		<script>
 		(function(w, d, s, l, i, wi) {
@@ -189,7 +189,7 @@
 
 			j.async = true;
 
-			j.src = "http://www.googletagmanager.com/gtm.js?id=" + i + dl;
+			j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
 
 			f.parentNode.insertBefore(j, f);
 
